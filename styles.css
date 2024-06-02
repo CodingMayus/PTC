@@ -55,6 +55,7 @@ section {
 
 p {
     font-size: 20px;
+    text-align: center;
 }
 
 h2 {
@@ -123,4 +124,11 @@ footer {
     justify-content:center; /* Evenly space items */
     gap:10vw;
  
+}
+#map{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:120vh;
+
 }
