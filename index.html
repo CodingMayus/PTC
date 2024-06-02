@@ -1,76 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Determine the path of trash with this simulation!">
-    <title>Trash Flows</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <link rel="icon" type="image/x-icon" href="/Images/icon.png">
-    <script src="scripts.js"></script> <!-- Close the script tag -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Font Awesome CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@755&display=swap" rel="stylesheet">
-</head>
-<nav>
-    <img src = "Images/icon.png" >
-    <span class="project">
-        SEA DEBRIS OCEAN PROMOTION
-        </span>
-</nav>
- 
+/* Reset default padding and margin for all elements */
+* {
+    padding: 0;
+    margin: 0;
+}
 
-<body>
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-    <header>
-        <!-- Header content can be added here -->
-    <!-- <h1><strong>Trash Flows</strong></h1>     -->
-    </header>   
-    
-        <section class ="cover">
-            <h1 id="taglines">Watch where your trash ends up!</h1></section>
+/* Cover section styles */
+.cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width:100%; */
+    height:70vh; /* Set a fixed height or adjust as needed */
+    min-height: 50vh; /* Minimum height of 50% viewport height */
+    background-image: linear-gradient(#0073e6 1%, rgba(4, 9, 30, 0.7)), url("../Images/background.jpg");
+/* ../ is required for github pages as the directory is different */
+    background-size: cover;
+    background-position: center;
+}
+
+#taglines {
+    font-size: 50px;
+    animation:fade-in 1.5s;
+}
+
+
+/* Navigation bar styles */
+nav {
+    background-color: #0073e6;
+    width: 100%;
+    height: 60px; /* Set a fixed height for the navigation bar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+     margin:30px;
    
-        </section>
-            <section id="problem">
-                <section class = "contain">
-                    <h2>The Problem.</h2>
-                </section>
+ 
+    /* animation:typing 2s; */
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin:30px;
+    color: #0073e6;
+    animation:typing 2s; 
+    white-space: nowrap;
+    width:100%; 
+    overflow:hidden;   
+}
 
-                    <p>Welcome to our project on ocean protection, focusing on the arguably the biggest problem facing the Oceans: Trash. </p>
-                    <p>Islands of them results in the destruction of thousands of kilometers of ocean.  But what might be argubly the most unexpected fact: Most trash gets lost in the sea.</p>                  
-            </section>
-            
-            <section id="about">
-                <section class = "contain">
-                    <h2>Our Solution.</h2>
-                </section>
-               <p>Tackle the problem directly by simulating real-ocean current environments using reliable API data - enabling us to see where trash will end up.  
-                </p>
-                <p>Place trash in the map for it to simulate where the trash will end up.  
-                2 months into the future?  5?  A year?  It's your choice.</p></section>
-         
-    </section>
+.contain{
+    display:flex;
+    justify-content: center;
+    width:100%;    
+}
+/* Skip buttons styles */
+.skip-buttons {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 10px 20px;
+    width: 20vw;
+    height: 50px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-       <section id ="map">
-    <h2>Map.</h2>
-    <!--Implement Map here-->
-      </section>
-       <section id="button-containers">
-        <button class = "skip-buttons" id ="for">
-            <i class="fa-solid fa-backward"></i>
-           </button>
-           <button class ="skip-buttons" id ="back">
-            <i class="fa-solid fa-forward"></i>
-           </button>
-       </section>
-    
-        </class>
+.skip-buttons i {
+    margin-right: 10px; /* Adjust margin as needed */
+}
 
-    
-    <footer>
-        <p>&copy; 2024 Under the Water. All rights reserved.</p>
-    </footer>
-</body>
+.skip-buttons:hover {
+    background-color: #005bb5;
+}
 
-</html>
+.skip-buttons:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(-4px);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+/* Additional styles for specific elements */
+#title {
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.project {
+    text-align: left;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 24px;
+    font-style: normal;
+}
+
+#button-containers {
+    display: flex;
+    justify-content:center; /* Evenly space items */
+    gap:10vw;
+ 
+}
+#map{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:80vh;
+
+}
+
+
+@keyframes fade-in{
+    100%{
+        opacity:100%;
+    }
+    0%{
+        opacity: 0;
+    }
+}
+@keyframes typing{
+    from{width:0;}
+}
