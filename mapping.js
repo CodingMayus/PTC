@@ -45,6 +45,7 @@ var map = L.map('map').setView([0, 0], 3);
     });
 
     // Calculate distance between two points in kilometers
+    //sinehave's equation
     function getDistance(lat1, lon1, lat2, lon2) {
       const R = 6371; // Radius of the Earth in km
       const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -72,7 +73,7 @@ var map = L.map('map').setView([0, 0], 3);
         }
       });
       
-      if(minDistance.toFixed(2)>4000){
+      if(minDistance.toFixed(2)>2700){
         alert("Nearest gyre: " + nearestGyre.name + "\nDistance: " + minDistance.toFixed(2) + " km. \n There is a low chance for this trash to end up in the Gyre anytime soon.  ");
       }else{
         alert("Nearest gyre: " + nearestGyre.name + "\nDistance: " + minDistance.toFixed(2) + " km");
