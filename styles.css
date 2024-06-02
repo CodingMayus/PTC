@@ -10,6 +10,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    opacity: 1;
 }
 
 /* Cover section styles */
@@ -20,10 +21,9 @@ body {
     /* width:100%; */
     height:70vh; /* Set a fixed height or adjust as needed */
     min-height: 50vh; /* Minimum height of 50% viewport height */
-    background-image: linear-gradient(#0073e6 1%, rgba(4, 9, 30, 0.7)), url("Images/background.jpg");
+    background-image: linear-gradient(#0073e6 1%, rgba(4, 9, 30, 0.7)), url("/Images/background.jpg");
     background-size: cover;
     background-position: center;
-    /*../ is required as github pages has a different directory*/
 }
 
 #taglines {
@@ -70,7 +70,7 @@ h2 {
     text-align: center;
     margin:30px;
     color: #0073e6;
-    animation:typing 2s; 
+    animation:typing 5s; 
     white-space: nowrap;
     width:100%; 
     overflow:hidden;   
@@ -144,11 +144,12 @@ footer {
  
 }
 #map{
+height:80vh;
+
+}
+#map-container{
     display:flex;
     justify-content: center;
-    width:100%;
-    height:80vh;
-
 }
 
 
